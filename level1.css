@@ -1,0 +1,89 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #e0f7fa;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
+h1, h2 {
+  color: #00796b;
+  margin: 10px 0;
+}
+
+.hud {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+button {
+  padding: 6px 14px;
+  border: none;
+  background: #00796b;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#game-area {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin-top: 15px;
+  background: #b2dfdb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Tap image */
+.tap {
+  width: 50px;
+  height: 50px;
+  background: url('assets/tap.png') no-repeat center/cover;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Water drop under tap */
+.tap .drop {
+  width: 10px;
+  height: 15px;
+  background: #00aaff;
+  border-radius: 50%;
+  position: absolute;
+  top: 45px;
+  left: 20px;
+  animation: drip 0.8s infinite;
+}
+
+/* Drop animation */
+@keyframes drip {
+  0% { transform: translateY(0); opacity: 1; }
+  80% { transform: translateY(30px); opacity: 1; }
+  100% { transform: translateY(40px); opacity: 0; }
+}
+
+/* Quiz Section */
+.hidden {
+  display: none;
+}
+
+#options button {
+  display: block;
+  margin: 6px auto;
+  width: 80%;
+}
