@@ -1,0 +1,79 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fffde7; /* light yellow background */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #fbc02d;
+  margin: 0;
+}
+
+.hud {
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+button {
+  padding: 6px 14px;
+  border: none;
+  background: #fbc02d;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #f9a825;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Default light (ON) */
+.light {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #ffeb3b;
+  box-shadow: 0 0 25px 8px #ffeb3b;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Light OFF state */
+.light.off {
+  background: #9e9e9e;
+  box-shadow: none;
+}
