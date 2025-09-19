@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Waste Sorter Game</title>
+  <link rel="stylesheet" href="level2.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>♻ Waste Sorter</h1>
+
+    <!-- Game Area -->
+    <div id="game-area">
+      <div class="bins">
+        <div class="bin" id="recyclable">Recyclable</div>
+        <div class="bin" id="organic">Organic</div>
+        <div class="bin" id="hazardous">Hazardous</div>
+      </div>
+      <div id="items"></div>
+    </div>
+
+    <!-- HUD -->
+    <div class="hud">
+      <button onclick="startGame()">Start</button>
+      <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-section" class="hidden">
+      <h2>🌍 Quick Quiz</h2>
+      <p id="question"></p>
+      <div id="options"></div>
+      <p id="feedback"></p>
+      <button id="next-btn" onclick="nextQuestion()" class="hidden">Next</button>
+    </div>
+  </div>
+
+  <script src="level2.js"></script>
+</body>
+</html>
